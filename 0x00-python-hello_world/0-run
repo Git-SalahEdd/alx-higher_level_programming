@@ -1,4 +1,2 @@
 #!/bin/bash
-# This is a comment explaining what the script does.
-# Replace 'your_python_script.py' with the actual name of your Python script.
 python3 $PYFILE
