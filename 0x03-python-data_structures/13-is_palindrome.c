@@ -16,10 +16,6 @@ int is_palindrome(listint_t **head)
 	{
 		return (1);
 	}
-	if (!(*head)->n || !(*head)->next->n)
-	{
-		return (0);
-	}
 	while (fast && fast->next)
 	{
 	 slow = slow->next;
@@ -34,9 +30,9 @@ int is_palindrome(listint_t **head)
 	}
 	while (first_half && second_half)
 	{
-		if (first_half->n == second_half->n)
+		if (first_half->n != second_half->n)
 		{
-			return (1);
+			return (0);
 		}
 		first_half = first_half->next;
 		second_half = second_half->next;
