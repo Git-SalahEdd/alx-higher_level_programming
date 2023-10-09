@@ -30,9 +30,9 @@ int is_palindrome(listint_t **head)
 	}
 	while (first_half && second_half)
 	{
-		if (first_half->n != second_half->n)
+		if (first_half->n == second_half->n)
 		{
-			return (0);
+			return (1);
 		}
 		first_half = first_half->next;
 		second_half = second_half->next;
