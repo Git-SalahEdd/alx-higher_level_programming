@@ -1,0 +1,71 @@
+==========================================================================
+
+	Test cases for add_integer Function in 0-add_integer.py
+
+==========================================================================
+
+Import function from Module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Cheking Docstring:
+
+	>>> docstring = __import__('0-add_integer').__doc__
+	>>> len(docstring) > 0
+	True
+
+Checking negative a:
+
+	>>> add_integer(-97, 100)
+        3
+
+Checking negative b:
+	
+	>>> add_integer(66, -66)
+	0
+
+Checking one parameter:
+
+	>>> add_integer(2)
+        100
+
+Checking one negative:
+
+  	>>> add_integer(-10)
+        88
+
+Checking one Float:
+	
+	>>> add_integer(0.5)
+        98
+
+Checking one negative float:
+
+	>>> add_integer(-89.89)
+        9
+
+Checking int add to string case:
+
+	>>> add_integer(97, "string")
+        Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+Checking one string parameter:
+
+	>>> add_integer("string")
+        Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+checking two float:
+
+	>>> add_integer(15.56545, 1.57474147)
+        16
+
+Checking missing parameters:
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
