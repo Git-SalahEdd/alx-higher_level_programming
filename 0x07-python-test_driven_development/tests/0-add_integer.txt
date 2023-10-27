@@ -44,17 +44,52 @@ Checking one negative float:
 	>>> add_integer(-89.89)
         9
 
-Checking int add to string case:
+Checking a is int and b is string case:
 
 	>>> add_integer(97, "string")
         Traceback (most recent call last):
 	...
 	TypeError: b must be an integer
 
-Checking one string parameter:
+Checking a is string parameter:
 
 	>>> add_integer("string")
         Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking TypeError message of None arguments declared:
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking TypeError message of second argument non declared:
+
+	>>> add_integer(5, None)
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+Checking NameError a is not a integer & is not string:
+
+	>>> add_integer(string, 3)
+	Traceback (most recent call last):
+	...
+	NameError: name 'string' is not defined
+
+Checking NameError a and b are not integers & not string:
+
+	>>> add_integer(string1, string2)
+	Traceback (most recent call last):
+	...
+	NameError: name 'string1' is not defined
+
+Checking TypeError a and b are not integers:
+	
+	>>> add_integer("string1", "string2")
+	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
 
@@ -69,3 +104,17 @@ Checking missing parameters:
 	Traceback (most recent call last):
 	...
 	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Checking for OverflowError causing infinity flow when a is int and b is inf:
+
+	>>> add_integer(4, float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+Checking for ValueError for Non assigned Number NaN:
+	
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
