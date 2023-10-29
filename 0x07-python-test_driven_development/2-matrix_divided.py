@@ -22,15 +22,14 @@ def matrix_divided(matrix, div):
     if not matrix:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     
-    new_matrix = []
-    row_size = len(matrix[0])
+    new_matrix = [] 
     Msg_Err1 = "matrix must be a matrix (list of lists) of integers/floats"
     Msg_Err2 = "Each row of the matrix must have the same size"
     
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError(Msg_Err1)
     for row in matrix:
-        if len(row) != row_size:
+        if len(row) != len(matrix[0]):
             raise TypeError(Msg_Err2)
         for element in row:
             if not isinstance(element, (int, float)):

@@ -29,7 +29,7 @@ Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> print(matrix_divided([[1, 2, 3], 'hola'], 3))
+>>> print(matrix_divided([[1, 2, 3], 'string'], 3))
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
@@ -63,7 +63,7 @@ Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
->>> print(matrix_divided([[1, 2, 3], [1, 2, 3]], "hola, soy dora"))
+>>> print(matrix_divided([[1, 2, 3], [1, 2, 3]], "string, string2"))
 Traceback (most recent call last):
 ...
 TypeError: div must be a number

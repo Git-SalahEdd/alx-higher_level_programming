@@ -1,0 +1,66 @@
+*============================================================================*
+|                                                                            |
+|   Test cases for function that prints a square with the character #.       |
+|                                                                            |
+*============================================================================*
+
+Import function from Module:
+
+        >>> print_square = __import__('4-print_square').print_square
+
+Cheking Docstring:
+
+        >>> docstring = __import__('4-print_square').__doc__
+        >>> len(docstring) > 0
+        True
+
+Checking for negative int:
+	
+	>>> print_square(-12)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Checking for float size:
+
+	>>> print_square(0.56789)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Checking For string value :
+	
+	>>> print_square("aaaaaaaaaa")
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Checking empty arg:
+
+	>>> print_square()
+	Traceback (most recent call last):
+	...
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+Sucess testes:
+	
+>>> print_square(4)
+####
+####
+####
+####
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+>>> print_square(0)
+>>> print_square(1)
+#
