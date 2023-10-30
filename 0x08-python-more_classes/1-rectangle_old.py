@@ -4,8 +4,9 @@
 
 class Rectangle:
     """empty class Rectangle that defines a rectangle."""
+    
     def __init__(self, width=0, height=0):
-        """Class method
+        """"Initialize a new Rectangle.
 
             Args :
                 width: distance between its two shorter sides or edges.
