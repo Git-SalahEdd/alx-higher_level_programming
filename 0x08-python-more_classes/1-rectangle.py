@@ -12,8 +12,8 @@ class Rectangle:
                 width: distance between its two shorter sides or edges.
                 height: longer sides of the rectangle
         """
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
