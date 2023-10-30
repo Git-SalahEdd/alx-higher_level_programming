@@ -16,11 +16,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Properaty for width of the rectangle
-            Raises:
-                TypeError: width must be an integer
-                ValueError: width must be >= 0
-        """
+        """Properaty for width of the rectangle"""
         return self.__width
 
     @width.setter
@@ -33,11 +29,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Properaty for height of the rectangle
-            Raises:
-                TypeError: height must be an integer
-                ValueError: height must be >= 0
-        """
+        """Properaty for height of the rectangle"""
         return self.__height
 
     @height.setter
