@@ -1,3 +1,1 @@
-asigne string "Best School" to variable s1
-then asigne the value of s1 to s2
-print true if the s1 and 2 are equal or false if they are diffrent
+True
