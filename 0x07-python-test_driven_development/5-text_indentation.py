@@ -1,11 +1,13 @@
+#!/usr/bin/python3
+"""Module to prints a text with
+    2 new lines after each of these characters: ., ? and :
 """
-    Module to prints a text with 2 new lines after each of these characters: ., ? and :
 
-"""
 
 def text_indentation(text):
     """
-    Function that prints a text with 2 new lines after each of these characters: ., ? and :
+    Function that prints a text with
+    2 new lines after each of these characters: ., ? and :
 
     Args:
         text (str): The text to be processed by the function.
