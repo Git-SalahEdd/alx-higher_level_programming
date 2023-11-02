@@ -3,30 +3,27 @@
     Module to divides all elements of a matrix.
 """
 
+
 def matrix_divided(matrix, div):
-    """ matrix_divided divides all elements of a matrix.
-    
+    """matrix_divided divides all elements of a matrix.
     Args:
         matrix: list of lists of integers or floats
         div: a number (integer or float)
-    
     Raises:
         TypeError: matrix must be a matrix (list of lists) of integers/floats
         TypeError: Each row of the matrix must have the same size
         TypeError: div must be a number
         ZeroDivisionError: exception with the message division by zero
-    
     Return:
         Returns a new matrix
     """
-    if not matrix:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    
-    new_matrix = [] 
+    new_matrix = []
     Msg_Err1 = "matrix must be a matrix (list of lists) of integers/floats"
     Msg_Err2 = "Each row of the matrix must have the same size"
-    
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+    if not matrix:
+        raise TypeError(Msg_Err1)
+    if not isinstance(matrix, list) or not all(
+            isinstance(row, list) for row in matrix):
         raise TypeError(Msg_Err1)
     for row in matrix:
         if len(row) != len(matrix[0]):
