@@ -87,3 +87,24 @@ class Rectangle(Base):
         """
         self.value_validator("y", y)
         self.__y = y
+
+    def value_validator(self, name, value):
+        """
+        Validate the value for a specific attribute.
+
+        Args:
+            name (str): The name of the attribute being validated.
+            value: The value to be validated.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than or equal to 0 for
+                    "width" or "height", or less than 0 for "x" or "y".
+        """
+        if value is not None and type(value) is not int:
+            raise TypeError(name + " must be an integer")
+        if (name == "width" or name == "height") and value <= 0:
+            raise ValueError(name + " must be > 0")
+        if (name == "y" or name == "x") and value < 0:
+            raise ValueError(name + " must be >= 0")
+
