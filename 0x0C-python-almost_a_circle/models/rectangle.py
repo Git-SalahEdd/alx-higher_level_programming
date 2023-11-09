@@ -108,3 +108,21 @@ class Rectangle(Base):
         if (name == "y" or name == "x") and value < 0:
             raise ValueError(name + " must be >= 0")
 
+    def area(self):
+        """
+        Calculate the area of the rectangle.
+        """
+        return self.width * self.height
+
+    def display(self):
+        """
+        Display the rectangle by printing the "#" characters.
+        """
+        for i in range(self.y):
+            print()
+        for i in range(self.height):
+            print(" " * self.x, end="")
+            for j in range(self.width):
+                print("#", end="")
+            print()
+
