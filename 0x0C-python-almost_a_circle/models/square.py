@@ -37,3 +37,30 @@ class Square(Rectangle):
         self.value_validator("width", size)
         self.width = size
         self.height = size
+
+    def __str__(self):
+        """
+        Return a string representation of the square object.
+        """
+        s = "[{}] ({}) {}/{} - {}".format(
+            type(self).__name__, self.id, self.x, self.y, self.width
+        )
+        return s
+
+    def update(self, *args, **kwargs):
+        """
+        Update the attributes of the square object.
+
+        Args:
+            *args: Variable-length arguments representing attribute values.
+            **kwargs: Keyword arguments representing attribute-value pairs.
+        """
+        if len(args) > 0:
+            attrs = ["id", "size", "x", "y"]
+            i = 0
+            for arg in args:
+                setattr(self, attrs[i], arg)
+                i += 1
+            return
+        for key in kwargs:
+            setattr(self, key, kwargs[key])
