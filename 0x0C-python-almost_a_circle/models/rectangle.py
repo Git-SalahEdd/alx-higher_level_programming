@@ -126,3 +126,42 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def __str__(self):
+        """
+        Return a string representation of the rectangle object.
+        """
+        s = "[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id, self.x,
+            self.y, self.width, self.height
+        )
+        return s
+
+    def update(self, *args, **kwargs):
+        """
+        Update the attributes of the rectangle object.
+
+        Args:
+            *args: Variable-length arguments representing attribute values.
+            **kwargs: Keyword arguments representing attribute-value pairs.
+        """
+        if len(args) > 0:
+            attrs = ["id", "width", "height", "x", "y"]
+            i = 0
+            for arg in args:
+                setattr(self, attrs[i], arg)
+                i += 1
+        elif len(kwargs) > 0:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        """
+        Return a dictionary representation of the rectangle object.
+        """
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
